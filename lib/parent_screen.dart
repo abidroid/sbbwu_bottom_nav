@@ -3,6 +3,7 @@ import 'package:sbbwu_bottom_nav/pages/about_us_page.dart';
 import 'package:sbbwu_bottom_nav/pages/contact_us_page.dart';
 import 'package:sbbwu_bottom_nav/pages/home_page.dart';
 import 'package:sbbwu_bottom_nav/pages/success_stories_page.dart';
+import 'package:sbbwu_bottom_nav/screens/admin_screen.dart';
 
 class ParentScreen extends StatefulWidget {
   const ParentScreen({super.key});
@@ -53,7 +54,12 @@ class _ParentScreenState extends State<ParentScreen> {
             ListTile(leading: Icon(Icons.person),
               title: const Text('Admin'),
               trailing: Icon(Icons.arrow_forward_ios),
-              onTap: (){},
+              onTap: (){
+
+              Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                return const AdminScreen();
+              }));
+              },
             ),
             ListTile(leading: Icon(Icons.subject),
               title: const Text('Faculties'),
