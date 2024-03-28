@@ -35,8 +35,8 @@ class _ParentScreenState extends State<ParentScreen> {
             selectedIndex = index;
           });
         },
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        items: const [
+           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.ac_unit_sharp), label: 'About Us'),
           BottomNavigationBarItem(icon: Icon(Icons.phone), label: 'Contact Us'),
           BottomNavigationBarItem(icon: Icon(Icons.star_outline), label: 'Stories'),
