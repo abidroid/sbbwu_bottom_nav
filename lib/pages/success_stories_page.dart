@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbbwu_bottom_nav/utility/utility.dart';
 
 class SuccessStoriesPage extends StatelessWidget {
   const SuccessStoriesPage({super.key});
@@ -6,13 +7,19 @@ class SuccessStoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
-      child: const Center(
-        child: Text(
-          'Success Stories',
-          style: TextStyle(fontSize: 40),
-        ),
-      ),
+      child: ListView.separated(
+          itemCount: ssList.length,
+
+          separatorBuilder: (context, index){
+            return Container(color: Colors.red,height: 10,);
+          },
+          itemBuilder: (context, index){
+
+            String successStoryUrl = ssList[index];
+
+            return Card(child: Image.network(successStoryUrl));
+
+      })
     );
   }
 }
